@@ -6,6 +6,12 @@
 
 Aplicación Android para buscar videos de TikTok, reproducirlos dentro de la app y descargar el video o su audio. Desarrollada en Java, con Material Design 3 y temas claro y oscuro.
 
+## Descargar la aplicación
+
+Descarga el APK de la versión de prueba desde [Releases](https://github.com/IamDiomer/TikTokDownloader/releases). Abre la publicación más reciente y descarga el archivo `.apk` de sus adjuntos.
+
+Requiere **Android 7.0 o superior**. Las versiones preliminares están firmadas con la clave de desarrollo y se ofrecen para pruebas; no son compilaciones de producción para Google Play. Cada publicación incluye un archivo `SHA256SUMS.txt` para comprobar la integridad de la descarga.
+
 ## Funciones
 
 - Buscar un video pegando su enlace o compartiéndolo desde TikTok.
