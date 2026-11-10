@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">TikTok Downloader</string>
+    <string name="app_subtitle">Descarga videos de TikTok sin marca de agua</string>
+    <string name="label_quick_download">Descargar Video Directo</string>
+
+
+    <string name="input_hint">Pega el enlace aquí</string>
+    <string name="btn_paste">Pegar</string>
+    <string name="btn_fetch">Buscar video</string>
+
+    <string name="section_preview">Tu video, listo para guardar</string>
+    <string name="btn_download_nowm">Descargar sin marca de agua</string>
+    <string name="btn_download_wm">Con marca de agua</string>
+    <string name="btn_share_link">Compartir enlace</string>
+
+    <string name="instructions_title">En tres pasos</string>
+    <string name="instruction_step1">Copia el enlace del video en TikTok.</string>
+    <string name="instruction_step2">Pégalo aquí o compártelo con esta app.</string>
+
+    <string name="instruction_step3">Elige con o sin marca de agua y descarga.</string>
+
+    <string name="err_empty_url">Por favor ingresa o pega un enlace válido de TikTok.</string>
+    <string name="err_invalid_url">El enlace no parece ser un enlace válido de TikTok.</string>
+    <string name="err_fetching">No se pudo extraer la información del video. Intenta con otro enlace.</string>
+    <string name="err_clipboard_empty">El portapapeles está vacío o no contiene un enlace.</string>
+    <string name="msg_fetching">Buscando información del video...</string>
+    <string name="msg_download_started">Descarga iniciada. Revisa la barra de notificaciones.</string>
+    <string name="msg_quick_download_start">Iniciando descarga rápida de TikTok...</string>
+    <string name="msg_link_copied">Enlace copiado al portapapeles.</string>
+    <string name="brand_tagline">VIDEO DOWNLOADER</string>
+    <string name="hero_title">Guarda lo que\nte inspira.</string>
+    <string name="hero_subtitle">Tus videos favoritos, a un enlace de distancia.</string>
+    <string name="badge_mp4">Formato MP4</string>
+    <string name="badge_nowm">Sin marca de agua</string>
+    <string name="input_label">Enlace de TikTok</string>
+    <string name="download_location">Tus videos se guardan en Descargas.</string>
+    <string name="theme_title">Apariencia</string>
+    <string name="theme_system">Según el sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="theme_cancel">Cancelar</string>
+    <string name="btn_download_audio">Descargar audio</string>
+    <string name="player_description">Reproductor del video encontrado</string>
+    <string name="player_play">Reproducir video</string>
+    <string name="player_retry">Reintentar reproducción</string>
+    <string name="player_error">No se pudo reproducir el video. Toca reproducir para reintentar.</string>
+    <string name="player_unavailable">No hay un enlace de video disponible para reproducir.</string>
+</resources>

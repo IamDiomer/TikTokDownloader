@@ -1,0 +1,32 @@
+# Gradle and generated build output
+.gradle/
+.kotlin/
+**/build/
+.externalNativeBuild/
+.cxx/
+
+# Machine-specific configuration and IDE state
+local.properties
+.idea/
+*.iml
+.vscode/
+.codex/
+.agents/
+
+# Signing material and local secrets
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+.env
+.env.*
+!.env.example
+
+# Generated packages and captures
+*.apk
+*.aab
+captures/
+
+# OS metadata
+.DS_Store
+Thumbs.db

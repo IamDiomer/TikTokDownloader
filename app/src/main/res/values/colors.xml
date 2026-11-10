@@ -1,0 +1,16 @@
+<resources>
+    <color name="background">#F3F7F7</color>
+    <color name="background_end">#E8F1EF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_muted">#E8F0F0</color>
+    <color name="outline">#D5E2E3</color>
+    <color name="brand_primary">#006B63</color>
+    <color name="on_brand">#FFFFFF</color>
+    <color name="text_primary">#142D35</color>
+    <color name="text_secondary">#526B72</color>
+    <color name="accent">#C33550</color>
+    <color name="hero_background">#DFF3EC</color>
+    <color name="hero_text">#255E53</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

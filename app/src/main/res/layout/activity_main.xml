@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRoot" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/screen_background" tools:context=".MainActivity">
+        <LinearLayout android:id="@+id/appHeader" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/background" android:paddingHorizontal="24dp" android:paddingVertical="16dp"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                android:src="@drawable/ic_brand" android:importantForAccessibility="no" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="12dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/app_name" android:textColor="@color/text_primary"
+                    android:textSize="16sp" android:fontFamily="sans-serif-medium" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/brand_tagline" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:letterSpacing="0.08" android:layout_marginTop="3dp" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnTheme"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="48dp" android:layout_height="48dp" android:minWidth="0dp"
+                android:padding="12dp" android:insetTop="0dp" android:insetBottom="0dp"
+                android:contentDescription="@string/theme_title" app:cornerRadius="16dp"
+                app:icon="@drawable/ic_appearance" app:iconSize="24dp" app:iconPadding="0dp"
+                app:iconTint="@color/brand_primary" app:strokeColor="@color/outline" />
+        </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline" android:importantForAccessibility="no" />
+    <androidx.core.widget.NestedScrollView android:id="@+id/mainScroll"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:fillViewport="true" android:clipToPadding="false">
+        <LinearLayout android:id="@+id/scrollContent" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="@string/hero_title" android:textSize="36sp"
+            android:textColor="@color/text_primary" android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.04" android:includeFontPadding="false" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/hero_subtitle" android:textSize="15sp"
+            android:textColor="@color/text_secondary" android:lineSpacingExtra="4dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="20dp" android:layout_marginBottom="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_soft_badge" android:paddingHorizontal="12dp" android:paddingVertical="7dp"
+                android:text="@string/badge_mp4" android:textColor="@color/hero_text" android:textSize="12sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:background="@drawable/bg_soft_badge" android:paddingHorizontal="12dp" android:paddingVertical="7dp"
+                android:text="@string/badge_nowm" android:textColor="@color/hero_text" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView style="@style/Widget.Downloader.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="@string/input_label" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnPaste"
+                        style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="48dp"
+                        android:text="@string/btn_paste" app:icon="@drawable/ic_paste" app:iconSize="18dp"
+                        android:textColor="@color/brand_primary" app:iconTint="@color/brand_primary" />
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilUrl"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="@string/input_hint"
+                    app:boxBackgroundColor="@color/surface" app:boxStrokeColor="@color/field_outline"
+                    app:boxCornerRadiusBottomEnd="14dp" app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusTopStart="14dp"
+                    app:hintTextColor="@color/brand_primary" app:endIconMode="clear_text"
+                    app:endIconTint="@color/text_secondary" app:startIconDrawable="@drawable/ic_link"
+                    app:startIconTint="@color/text_secondary">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etUrl"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="60dp"
+                        android:inputType="textUri" android:imeOptions="actionGo" android:singleLine="true"
+                        android:textColor="@color/text_primary" android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnFetch"
+                    style="@style/Widget.Downloader.PrimaryButton" android:layout_width="match_parent"
+                    android:layout_height="56dp" android:layout_marginTop="16dp" android:text="@string/btn_fetch"
+                    app:icon="@drawable/ic_download" app:iconGravity="textStart" />
+                <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progressIndicator"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+                    android:indeterminate="true" android:visibility="gone" app:indicatorColor="@color/brand_primary"
+                    app:trackColor="@color/surface_muted" app:trackCornerRadius="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!-- Preview Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Downloader.Card"
+            android:id="@+id/cardPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:strokeWidth="1dp"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/section_preview"
+                    android:textColor="@color/brand_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/videoFrame" android:layout_width="match_parent" android:layout_height="280dp"
+                    app:cardBackgroundColor="@color/black" app:cardCornerRadius="16dp" app:strokeWidth="0dp">
+                    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <androidx.media3.ui.PlayerView android:id="@+id/videoPlayer"
+                            android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:visibility="invisible" android:contentDescription="@string/player_description"
+                            app:surface_type="texture_view" app:resize_mode="fit"
+                            app:show_buffering="when_playing" app:show_next_button="false"
+                            app:show_previous_button="false" app:keep_content_on_player_reset="true" />
+                        <ImageView android:id="@+id/ivCover" android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:contentDescription="@string/section_preview"
+                            android:scaleType="centerCrop" />
+                        <com.google.android.material.button.MaterialButton android:id="@+id/btnPlayVideo"
+                            android:layout_width="64dp" android:layout_height="64dp" android:layout_gravity="center"
+                            android:minWidth="0dp" android:minHeight="0dp" android:padding="20dp"
+                            android:insetTop="0dp" android:insetBottom="0dp" android:backgroundTint="@color/white"
+                            android:contentDescription="@string/player_play" app:cornerRadius="32dp"
+                            app:icon="@drawable/ic_play" app:iconTint="@color/black" app:iconSize="24dp" app:iconPadding="0dp" />
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView android:id="@+id/tvPlaybackStatus" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp" android:visibility="gone"
+                    android:accessibilityLiveRegion="polite" android:textColor="@color/text_secondary" android:textSize="13sp" />
+
+                <!-- Author Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAuthorName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:text="Usuario TikTok" />
+
+                        <TextView
+                            android:id="@+id/tvAuthorHandle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            tools:text="username" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Caption / Title -->
+                <TextView
+                    android:id="@+id/tvVideoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp"
+                    tools:text="Descripción del video de TikTok..." />
+
+                <!-- Stats Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLikes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        tools:text="❤️ 12.5K" />
+
+                    <TextView
+                        android:id="@+id/tvComments"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        tools:text="💬 1.2K" />
+
+                    <TextView
+                        android:id="@+id/tvShares"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        tools:text="🔁 450" />
+
+                    <TextView
+                        android:id="@+id/tvViews"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        tools:text="👁️ 150K" />
+                </LinearLayout>
+
+                <!-- Download Buttons -->
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.Downloader.PrimaryButton"
+                    android:id="@+id/btnDownloadNoWm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/brand_primary"
+                    android:paddingVertical="12dp"
+                    android:text="@string/btn_download_nowm"
+                    android:textColor="@color/on_brand"
+                    android:textSize="14sp"
+                    app:icon="@drawable/ic_download"
+                    app:iconTint="@color/on_brand" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDownloadWm"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/btn_download_wm"
+                    android:textColor="@color/text_primary"
+                    app:icon="@drawable/ic_video"
+                    app:iconTint="@color/brand_primary"
+                    app:strokeColor="@color/outline" />
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnDownloadAudio"
+                    style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                    android:text="@string/btn_download_audio" app:icon="@drawable/ic_audio" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShare"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/btn_share_link"
+                    android:textColor="@color/text_secondary"
+                    app:icon="@drawable/ic_share"
+                    app:iconTint="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/Widget.Downloader.Card"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/instructions_title" android:textColor="@color/text_primary"
+                    android:textSize="16sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="16dp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:gravity="center"
+                        android:background="@drawable/bg_soft_badge" android:text="1" android:textColor="@color/hero_text"
+                        android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:layout_marginStart="12dp" android:layout_marginTop="3dp" android:text="@string/instruction_step1"
+                        android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingExtra="3dp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:gravity="center"
+                        android:background="@drawable/bg_soft_badge" android:text="2" android:textColor="@color/hero_text"
+                        android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:layout_marginStart="12dp" android:layout_marginTop="3dp" android:text="@string/instruction_step2"
+                        android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingExtra="3dp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:gravity="center"
+                        android:background="@drawable/bg_soft_badge" android:text="3" android:textColor="@color/hero_text"
+                        android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:layout_marginStart="12dp" android:layout_marginTop="3dp" android:text="@string/instruction_step3"
+                        android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingExtra="3dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:layout_marginBottom="12dp" android:gravity="center"
+            android:text="@string/download_location" android:textSize="12sp" android:textColor="@color/text_secondary" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
